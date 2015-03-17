@@ -19,6 +19,7 @@ class ACF_To_Fieldmanager {
 	/**
 	 * This function takes a properly formatted array of legacy data and
 	 * migrates it to fieldmanager
+	 *
 	 * @param $legacy_fields array
 	 *  array(
 	 * 	'divider_text' => array(
