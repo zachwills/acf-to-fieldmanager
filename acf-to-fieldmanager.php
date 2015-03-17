@@ -44,7 +44,7 @@ class ACF_To_Fieldmanager {
 		}
 
 		foreach( $legacy_fields as $legacy_name => $legacy_data ) {
-			// handle repeating field data differently than single data
+			// Handle repeating field data differently than single data
 			if( ! empty( $legacy_data['repeating'] ) && ! empty( $legacy_data['children'] ) ) {
 				$repeating_field_data = $this->handle_repeating_fields( $legacy_name, $legacy_data );
 				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $repeating_field_data );
@@ -80,7 +80,7 @@ class ACF_To_Fieldmanager {
 			return false;
 		}
 
-		// create an empty array to fill up with data
+		// Create an empty array to fill up with data
 		$repeating_data = array();
 
 		foreach( $legacy_data['children'] as $k => $child ) {
