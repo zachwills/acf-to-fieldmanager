@@ -1,2 +1,2 @@
-ACF to Fieldmanager
+Advanced Custom Fields (ACF) to Fieldmanager
 ==

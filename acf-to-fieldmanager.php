@@ -19,7 +19,6 @@ class ACF_To_Fieldmanager {
 	/**
 	 * This function takes a properly formatted array of legacy data and
 	 * migrates it to fieldmanager
-	 * @param $post_id int
 	 * @param $legacy_fields array
 	 *  array(
 	 * 	'divider_text' => array(
@@ -36,7 +35,7 @@ class ACF_To_Fieldmanager {
 	 *	),
 	 * );
 	 * @param $delete Should we delete the old post meta info
-	 * @return bool
+	 * @return WP_CLI output
 	 */
 	public function migrate( $legacy_fields, $delete = false ) {
 		if( ! $legacy_fields ) {
@@ -47,11 +46,11 @@ class ACF_To_Fieldmanager {
 			// handle repeating field data differently than single data
 			if( ! empty( $legacy_data['repeating'] ) && ! empty( $legacy_data['children'] ) ) {
 				$repeating_field_data = $this->handle_repeating_fields( $legacy_name, $legacy_data );
-				$migration = update_post_meta( $this->post_id;, $legacy_data['new_name'], $repeating_field_data );
+				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $repeating_field_data );
 			} else {
-				$migration = update_post_meta( $this->post_id;, $legacy_data['new_name'], $legacy_data['value'] );
+				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $legacy_data['value'] );
 				if( true === $delete ) {
-					delete_post_meta( $this->post_id;, $legacy_name );
+					delete_post_meta( $this->post_id, $legacy_name );
 				}
 			}
 
