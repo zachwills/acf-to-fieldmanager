@@ -71,8 +71,7 @@ class ACF_To_Fieldmanager {
 	/**
 	 * Handles dealing with repeating fields
 	 *
-	 * @param  string $legacy_name    The name of the ACF field containing
-	 *                                repeating data
+	 * @param  string $legacy_name    The name of the ACF field containing repeating data
 	 * @param  array  $legacy_data    The repeating field data from ACF
 	 * @return array  $repeating_data The data formatted for fieldmanager
 	 */
