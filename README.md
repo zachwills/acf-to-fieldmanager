@@ -33,7 +33,7 @@ It also requires [Advanced Custom Fields](http://www.advancedcustomfields.com/) 
 
 ## Examples
 
-Here are some simple code samples demonstrating use.
+Here are some simple code samples demonstrating use. When I use this class, I use it in tandem with a custom WP_CLI migration command that is made for whatever project I'm working on (hence the `WP_CLI::` lines outputting information in the source).
 
 ## Migrating simple fields
 ````php
