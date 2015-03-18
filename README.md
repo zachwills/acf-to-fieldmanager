@@ -13,7 +13,9 @@ Using ACF_To_Fieldmanager is easy- just format an associative array of arrays us
 
 ### Requirements
 
-This utility library, as you might have guessed, requires WP_CLI. The only piece of it that requires this is the output to the terminal, however. So if you wanted to use it without WP_CLI, you could just comment out the `WP_CLI::` lines that you see. If I get time in the future I might look into this more.
+This utility library, as you might have guessed, requires [WP_CLI](http://wp-cli.org/). The only piece of it that requires this is the output to the terminal, however. So if you wanted to use it without WP_CLI, you could just comment out the `WP_CLI::` lines that you see. If I get time in the future I might look into this more.
+
+It also requires [Advanced Custom Fields](http://www.advancedcustomfields.com/) and [Fieldmanager](http://fieldmanager.org/), since they determine the format of the initial data & the final migrated data.
 
 ### Supported paramaters
 * `new_name`
