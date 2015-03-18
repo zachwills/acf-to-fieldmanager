@@ -103,14 +103,14 @@ class ACF_To_Fieldmanager {
 			 */
 			if( 'string' !== gettype( $k ) ) {
 				$child_name = $child;
-			} elseif( 'integer' !== gettype( $k ) ) {
-				return false;
+			} else {
+				$child_name = $k;
 			}
 
 			// Get data from ACF repeating field
 			for( $i = 0; $i < $legacy_data['value']; $i++ ) {
 				// e.g. 'canyon_photos_1_photo' (ACF stores repeating data this way)
-				$repeating_field_name = $legacy_name . '_' . $i . '_' . $k;
+				$repeating_field_name = $legacy_name . '_' . $i . '_' . $child_name;
 
 				// If this sub repeating field is also a repeating field
 				if( isset( $child['children'] ) ) {
@@ -126,10 +126,10 @@ class ACF_To_Fieldmanager {
 					 * field (say that 5 times fast). So call this function on itself to
 					 * handle formatting the data for us.
 					 */
-					$repeating_data[ $i ][ $k ] = $this->handle_repeating_fields( $repeating_field_name, $child_legacy_data );
+					$repeating_data[ $i ][ $child_name ] = $this->handle_repeating_fields( $repeating_field_name, $child_legacy_data );
 				} else {
 					// This sub field is not repeating, so we can grab the data right now
-					$repeating_data[ $i ][ $k ] = get_post_meta( $this->post_id, $repeating_field_name, true );
+					$repeating_data[ $i ][ $child_name ] = get_post_meta( $this->post_id, $repeating_field_name, true );
 				}
 
 				if( true === $delete ) {
