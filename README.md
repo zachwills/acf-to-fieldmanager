@@ -109,7 +109,7 @@ $legacy_fields = array(
 );
 
 $field_migration = new ACF_To_Fieldmanager( $post_id );
-$field_migration->migrate( $legacy_fields );n
+$field_migration->migrate( $legacy_fields );
 ````
 
 ## Planned Updates
