@@ -1,7 +1,7 @@
 Advanced Custom Fields (ACF) to Fieldmanager (v0.1)
 ==
 
-ACF_To_Fieldmanager is a small helper / utility class with a goal of saving you time when you have to migrate from ACF to Fieldmanager. You might run into this pretty often if you are working on sites that use WordPress VIP.
+ACF_To_Fieldmanager is a small helper / utility class with a goal of saving you time when you have to migrate from ACF to Fieldmanager. You might run into this pretty often if you are working on sites that you need to migrate to WordPress VIP.
 
 If you run into any issues or have questions, open an issue here on GitHub! PR's are welcome!
 
