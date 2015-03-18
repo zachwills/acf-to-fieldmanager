@@ -66,7 +66,7 @@ $legacy_fields = array(
 	),
 	'hotels' => array(
 		'new_name' => 'new_hotels',
-		'value' => get_post_meta( $post_id, 'locations', true ),
+		'value' => get_post_meta( $post_id, 'hotels', true ),
 	),
 	'group_photos' => array(
 		'new_name' => 'new_group_photos',
