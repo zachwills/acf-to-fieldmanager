@@ -2,7 +2,8 @@
 /**
  * ACF_TO_Fieldmanager
  *
- * @author Zach Wills (@zachwills)
+ * @version  0.1
+ * @author   Zach Wills (@zachwills)
  */
 class ACF_To_Fieldmanager {
 	private $post_id;
