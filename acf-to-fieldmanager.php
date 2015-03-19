@@ -51,6 +51,14 @@ class ACF_To_Fieldmanager {
 				$repeating_field_data = $this->handle_repeating_fields( $legacy_name, $legacy_data );
 				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $repeating_field_data );
 			} else {
+				// Single is set if the data usually returns an array
+				// but instead should be a single value. e.g. A relationship field with
+				// a limit set to 1.
+				if( ! empty( $legacy_data['single'] ) ) {
+					$legacy_data['value'] = $legacy_data['value'][0];
+				}
+
+				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $legacy_data['value'] );
 				$migration = update_post_meta( $this->post_id, $legacy_data['new_name'], $legacy_data['value'] );
 				if( true === $delete ) {
 					delete_post_meta( $this->post_id, $legacy_name );

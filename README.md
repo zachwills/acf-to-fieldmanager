@@ -25,7 +25,10 @@ It also requires [Advanced Custom Fields](http://www.advancedcustomfields.com/) 
     * This is the value of your custom field
 * `repeating`
     * `true/false`
-    * This is for repeater fields. .
+    * This is for repeater fields.
+* 'single'
+    * `bool`
+    * Pass this through if the field you are working with usually returns data but you need it to return a single string instead. I've run into this when migrating relationship fields that have a maximum set of 1.
 * `children`
     * `array`
     *  An array containing an array of the `field_names` of the repeater field.
