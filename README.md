@@ -115,8 +115,7 @@ $field_migration = new ACF_To_Fieldmanager( $post_id );
 $field_migration->migrate( $legacy_fields );
 ````
 
-## Planned Updates
-* Allow a callback function for each field for normalization purposes.
+## Roadmap
 * Better error / success messaging
 
 ## Changelog
